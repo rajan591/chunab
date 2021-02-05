@@ -13,5 +13,6 @@ app.use(bodyParser.json());
 
 app.get("/", (req, res) => res.json({ hello: "world" }));
 app.use("/api/auth", routes.auth);
+app.use("/api/polls", routes.poll);
 
 app.listen(port, console.log(`app is running in port ${port}`));
